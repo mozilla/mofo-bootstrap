@@ -1,0 +1,30 @@
+{
+  "name": "foxlight",
+  "version": "0.1.0",
+  "description": "Mozilla Foundation Bootstrap theme.",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && npm-run-all --parallel server watch:**",
+    "build": "mkdirp dest/css/ && npm-run-all --parallel build:**",
+    "build:jade": "jade src/index.jade -o dest",
+    "build:sass": "node-sass src/sass/foxlight.sass dest/css/foxlight.css",
+    "server": "live-server ./dest --port=1979",
+    "watch:jade": "chokidar 'src/index.jade' -c 'npm run build:jade'",
+    "watch:sass": "chokidar 'src/sass/**/*.sass' -c 'npm run build:sass'"
+  },
+  "author": "Mozilla",
+  "license": "MPL-2.0",
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.2"
+  },
+  "devDependencies": {
+    "chokidar": "^1.4.2",
+    "chokidar-cli": "^1.2.0",
+    "jade": "^1.11.0",
+    "live-server": "^0.9.1",
+    "mkdirp": "^0.5.1",
+    "ncp": "^2.0.0",
+    "npm-run-all": "^1.5.1",
+    "sass": "^0.5.0"
+  }
+}
