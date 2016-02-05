@@ -6,6 +6,7 @@ html
     meta(name='description', content='Mozilla Research: Studying the Global Web. Stories and insights from 600 people in 22 communities in 7 countries around the world.')
     link(rel='stylesheet', href='//code.cdn.mozilla.net/fonts/fira.css')
     link(rel='stylesheet', href='css/foxlight.css')
+    link(rel='stylesheet', href='css/demo.css')
     title Foxlight – Demo
   body
     header
@@ -13,9 +14,36 @@ html
       .jumbotron
         h1.display-3 Foxlight
         p.lead Mozilla Foundation Bootstrap 4 theme
-      
+
       h2.display-4 Color
-      
+
+      mixin color-block(color, value)
+        div(class='color-block color-block-#{color}')
+          .swatch.darker 15% darkened
+          .swatch.regular 100%
+          .swatch.opacity-30 30%
+          .swatch.opacity-10 10%
+
+          .meta
+            p.name
+              strong=color
+            p.value=value
+
+      p.lead Primary Palette
+
+      .color-blocks
+        +color-block('knowledge-navy', '#007bb0')
+        +color-block('brilliant-blue', '#0094c7')
+        +color-block('teach-teal', '#00bfb8')
+        +color-block('guided-green', '#40b488')
+        +color-block('maker-magenta', '#ef2c65')
+
+      p.lead Accent Palette
+
+      .color-blocks
+        +color-block('youth-yellow', '#ffc958')
+        +color-block('charcoal', '#4d4f53')
+
       h2.display-4 Typography
-      
+
     footer

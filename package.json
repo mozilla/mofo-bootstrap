@@ -7,7 +7,7 @@
     "start": "npm run build && npm-run-all --parallel server watch:**",
     "build": "mkdirp dest/css/ && npm-run-all --parallel build:**",
     "build:jade": "jade src/index.jade -o dest",
-    "build:sass": "node-sass src/sass/foxlight.sass dest/css/foxlight.css",
+    "build:sass": "node-sass src/sass/foxlight.sass dest/css/foxlight.css && node-sass src/sass/demo.sass dest/css/demo.css",
     "server": "live-server ./dest --port=1979",
     "watch:jade": "chokidar 'src/index.jade' -c 'npm run build:jade'",
     "watch:sass": "chokidar 'src/sass/**/*.sass' -c 'npm run build:sass'"
@@ -24,7 +24,7 @@
     "live-server": "^0.9.1",
     "mkdirp": "^0.5.1",
     "ncp": "^2.0.0",
-    "npm-run-all": "^1.5.1",
-    "sass": "^0.5.0"
+    "node-sass": "^3.4.2",
+    "npm-run-all": "^1.5.1"
   }
 }

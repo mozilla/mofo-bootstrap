@@ -1,6 +1,6 @@
 # Foxlight
 
-**Mozilla Foundation Bootstrap theme.**
+**Mozilla Foundation Bootstrap 4 theme.**
 
 *Under heavy construction. Don't use this in production quite yet!*
 
