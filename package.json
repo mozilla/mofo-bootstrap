@@ -10,7 +10,8 @@
     "build:sass": "node-sass src/sass/foxlight.sass dest/css/foxlight.css && node-sass src/sass/demo.sass dest/css/demo.css",
     "server": "live-server ./dest --port=1979",
     "watch:jade": "chokidar 'src/index.jade' -c 'npm run build:jade'",
-    "watch:sass": "chokidar 'src/sass/**/*.sass' -c 'npm run build:sass'"
+    "watch:sass": "chokidar 'src/sass/**/*.sass' -c 'npm run build:sass'",
+    "test:sass": "sass-lint -c .sass-lint.yml --no-exit -v"
   },
   "author": "Mozilla",
   "license": "MPL-2.0",
@@ -25,6 +26,7 @@
     "mkdirp": "^0.5.1",
     "ncp": "^2.0.0",
     "node-sass": "^3.4.2",
-    "npm-run-all": "^1.5.1"
+    "npm-run-all": "^1.5.1",
+    "sass-lint": "^1.5.0"
   }
 }
