@@ -6,7 +6,7 @@
   display: flex
   margin-bottom: 2rem;
 
-.color-block
+.color-block, .text-block
   flex: 1
   margin: 10px
 
@@ -66,3 +66,12 @@
   @include color-block-children($youth-yellow)
 .color-block-charcoal
   @include color-block-children($charcoal)
+
+.text-block
+  text-align: center
+  h1
+    font-size: 5rem
+    letter-spacing: -0.15rem
+  h5
+    font-size: 1.45rem
+    line-height: 1rem
