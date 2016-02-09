@@ -1,0 +1,152 @@
+// This file is for Sass that applies only to the demo page
+
+@import 'custom/colors';
+@import 'custom/typography';
+
+.color-blocks {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.color-block {
+  flex: 1;
+  margin: 10px;
+  &:first-child {
+    margin-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+  .swatch {
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .darker {
+    color: $white;
+  }
+  .regular {
+    min-height: 100px;
+    color: $white;
+  }
+}
+
+.meta {
+  text-align: center;
+  > * {
+    padding: 10px 0 0;
+    margin: 0;
+  }
+  .value {
+    color: lighten($charcoal, 20%);
+  }
+}
+
+.text-block {
+  margin: 2rem 0;
+  text-align: left;
+  h1 {
+    font-size: 5rem;
+    letter-spacing: -0.15rem;
+  }
+  h5 {
+    font-size: 1.45rem;
+    line-height: 1rem;
+  }
+  .meta {
+    text-align: left;
+  }
+}
+
+.hero-unit {
+  padding: 1rem;
+  margin: 2rem 0;
+  width: 60vw;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.intro {
+  width: 60vw;
+}
+
+.typography {
+  text-align: left;
+  > * {
+    margin: 30px 0;
+  }
+  .type-unit {
+    color: lighten($charcoal, 35%);
+  }
+  .meta {
+    text-align: left;
+  }
+}
+
+@mixin color-block-children($color) {
+  .darker {
+    background: darken($color, 15%);
+  }
+  .regular {
+    background: $color;
+  }
+  .opacity-30 {
+    background: transparentize($color, .7);
+  }
+  .opacity-10 {
+    background: transparentize($color, .9);
+  }
+}
+
+.color-block-guided-green {
+  @include color-block-children($guided-green);
+}
+.color-block-maker-magenta {
+  @include color-block-children($maker-magenta);
+}
+.color-block-knowledge-navy {
+  @include color-block-children($knowledge-navy);
+}
+.color-block-brilliant-blue {
+  @include color-block-children($brilliant-blue);
+}
+.color-block-teach-teal {
+  @include color-block-children($teach-teal);
+}
+.color-block-youth-yellow {
+  @include color-block-children($youth-yellow);
+}
+.color-block-charcoal {
+  @include color-block-children($charcoal);
+}
+
+.text-block-600 {
+  h1, h5 {
+    font-weight: 600;
+  }
+}
+.text-block-500 {
+  h1, h5 {
+    font-weight: 500;
+  }
+}
+.text-block-400 {
+  h1, h5 {
+    font-weight: 400;
+  }
+}
+.text-block-300 {
+  h1, h5 {
+    font-weight: 300;
+  }
+}
+.text-block-200 {
+  h1, h5 {
+    font-weight: 200;
+  }
+}
+.text-block-100 {
+  h1, h5 {
+    font-weight: 100;
+  }
+}
