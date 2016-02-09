@@ -53,7 +53,6 @@ html
 
       hr
       h2.display-4 Typography
-      p.lead Primary Font Family
 
       .text-blocks
         +text-block('600', 'Extra Bold')
@@ -62,4 +61,45 @@ html
         +text-block('300', 'Medium')
         +text-block('200', 'Regular')
         +text-block('100', 'Light')
+      
+      hr
+      h2.display-4 Headings
+      
+      .typography
+        .hero-unit
+          h1 Hero Headline
+          h2 Hero Headline 2
+          
+        .type-unit
+          h1 Headline 1
+          p.meta 3.8rem, Fira Sans Bold
+        
+        .type-unit
+          h2 Headline 2
+          p.meta 3.5rem, Fira Sans Regular
+        
+        .type-unit
+          h3 Headline 3
+          p.meta 2.6rem, Fira Sans Medium
+        
+        .type-unit
+          h4 Headline 4
+          p.meta 1.8rem, Fira Sans SemiBold
+        
+        .type-unit
+          p.copy Body Copy Text
+          p.meta .copy, 1.4rem, Fira Sans Medium
+        
+        .type-unit
+          a(href="#") Link Text
+          p.meta 1.4rem, Fira Sans Medium
+        
+        .type-unit
+          p.small Small copy for notes and additional descriptive details
+          p.meta .small, 1rem, Fira Sans Medium
+        
+        .type-unit
+          p.intro This is introductory text for a new section of content near the top of the page. Teach how to read, write, and participate on the Web.
+          p.meta .intro, 3rem, Fira Sans Regular
+        
     footer
