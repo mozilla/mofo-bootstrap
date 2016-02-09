@@ -29,6 +29,13 @@ html
               strong=color
             p.value=value
 
+      mixin text-block(weight, value)
+        div(class='text-block text-block-#{value}')
+          h1 Fira Sans
+          h5 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890
+          .meta 
+            p.value Fira Sans #{value}
+
       p.lead Primary Palette
 
       .color-blocks
@@ -44,13 +51,15 @@ html
         +color-block('youth-yellow', '#ffc958')
         +color-block('charcoal', '#4d4f53')
 
+      hr
       h2.display-4 Typography
       p.lead Primary Font Family
 
-      .text-block
-        h1 Fira Sans
-        h5 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890
-        .meta 
-          p.value Fira Sans
-
+      .text-blocks
+        +text-block('600', 'Extra Bold')
+        +text-block('500', 'Bold')
+        +text-block('400', 'SemiBold')
+        +text-block('300', 'Medium')
+        +text-block('200', 'Regular')
+        +text-block('100', 'Light')
     footer

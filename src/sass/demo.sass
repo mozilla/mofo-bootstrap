@@ -6,7 +6,7 @@
   display: flex
   margin-bottom: 2rem;
 
-.color-block, .text-block
+.color-block
   flex: 1
   margin: 10px
 
@@ -39,6 +39,23 @@
     .value
       color: lighten($charcoal, 20%)
 
+.text-block
+  margin-bottom: 2rem
+  text-align: center
+  h1
+    font-size: 5rem
+    letter-spacing: -0.15rem
+  h5
+    font-size: 1.45rem
+    line-height: 1rem
+  .meta
+    text-align: center
+    > *
+      padding: 10px 0 0 0
+      margin: 0
+    .value
+      color: lighten($charcoal, 20%)
+
 @mixin color-block-children($color)
   .darker
     background: darken($color, 15%)
@@ -67,11 +84,21 @@
 .color-block-charcoal
   @include color-block-children($charcoal)
 
-.text-block
-  text-align: center
-  h1
-    font-size: 5rem
-    letter-spacing: -0.15rem
-  h5
-    font-size: 1.45rem
-    line-height: 1rem
+.text-block-600
+  h1, h5
+    font-weight: 600
+.text-block-500
+  h1, h5
+    font-weight: 500
+.text-block-400
+  h1, h5
+    font-weight: 400
+.text-block-300
+  h1, h5
+    font-weight: 300
+.text-block-200
+  h1, h5
+    font-weight: 200
+.text-block-100
+  h1, h5
+    font-weight: 100
