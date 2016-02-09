@@ -11,3 +11,7 @@ Run the following commands in your terminal:
 1. `git clone https://github.com/gvn/foxlight.git && cd foxlight`
 2. `npm i`
 3. `npm start`
+
+## Linting
+
+To lint your Sass code, run `npm run test:sass`.
