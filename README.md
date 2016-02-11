@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/gvn/foxlight/badges/gpa.svg)](https://codeclimate.com/github/gvn/foxlight)
+
 # Foxlight
 
 **Mozilla Foundation Bootstrap 4 theme.**
