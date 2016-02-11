@@ -30,28 +30,30 @@ h4 {
   color: $charcoal;
 }
 
-p.copy {
+.copy {
   font-size: 1.4rem;
   line-height: 2rem;
   font-weight: 300;
   color: $charcoal;
 }
 
-a, a:link {
-  font-size: 1.4rem;
-  line-height: 2rem;
-  font-weight: 300;
-  color: $knowledge-navy;
+a {
+  &:link {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 300;
+    color: $knowledge-navy;
+  }
 }
 
-p.small {
+.small {
   font-size: 1rem;
   line-height: 1.8rem;
   font-weight: 300;
   color: $charcoal;
 }
 
-p.intro {
+.intro {
   font-size: 3rem;
   line-height: 3.7rem;
   letter-spacing: -0.1rem;
@@ -61,14 +63,15 @@ p.intro {
 
 .hero-unit {
   h1 {
-    color: white;
-    text-shadow: 1px 3px transparentize(#000, .6);
+    color: $white;
+    text-shadow: 1px 3px transparentize($black, .6);
     font-size: 4.5rem;
     font-weight: 600;
   }
+
   h2 {
-    color: white;
-    text-shadow: 1px 3px transparentize(#000, .6);
+    color: $white;
+    text-shadow: 1px 3px transparentize($black, .6);
     font-size: 2.6rem;
     font-weight: 100;
   }

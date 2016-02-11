@@ -11,7 +11,8 @@
     "server": "live-server ./dest --port=1979",
     "watch:jade": "chokidar 'src/index.jade' -c 'npm run build:jade'",
     "watch:scss": "chokidar 'src/scss/**/*.scss' -c 'npm run build:scss'",
-    "test:sass": "sass-lint -c .sass-lint.yml z--no-exit -v"
+    "test": "npm run test:sass",
+    "test:sass": "sass-lint -c .sass-lint.yml --verbose --no-exit"
   },
   "author": "Mozilla",
   "license": "MPL-2.0",
