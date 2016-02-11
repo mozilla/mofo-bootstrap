@@ -7,11 +7,11 @@
     "start": "npm run build && npm-run-all --parallel server watch:**",
     "build": "mkdirp dest/css/ && npm-run-all --parallel build:**",
     "build:jade": "jade src/index.jade -o dest",
-    "build:sass": "node-sass src/sass/foxlight.sass dest/css/foxlight.css && node-sass src/sass/demo.sass dest/css/demo.css",
+    "build:scss": "node-sass src/scss/foxlight.scss dest/css/foxlight.css && node-sass src/scss/demo.scss dest/css/demo.css",
     "server": "live-server ./dest --port=1979",
     "watch:jade": "chokidar 'src/index.jade' -c 'npm run build:jade'",
-    "watch:sass": "chokidar 'src/sass/**/*.sass' -c 'npm run build:sass'",
-    "test:sass": "sass-lint -c .sass-lint.yml --no-exit -v"
+    "watch:scss": "chokidar 'src/scss/**/*.scss' -c 'npm run build:scss'",
+    "test:sass": "sass-lint -c .sass-lint.yml z--no-exit -v"
   },
   "author": "Mozilla",
   "license": "MPL-2.0",
