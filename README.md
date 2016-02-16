@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/gvn/foxlight.svg?branch=master)](https://travis-ci.org/gvn/foxlight)
+[![dependency Status](https://img.shields.io/david/gvn/foxlight.svg)](https://david-dm.org/gvn/foxlight#info=dependencies)
+[![devDependency Status](https://img.shields.io/david/dev/gvn/foxlight.svg)](https://david-dm.org/gvn/foxlight#info=devDependencies)
 
 # Foxlight
 
