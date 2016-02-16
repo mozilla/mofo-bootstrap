@@ -1,4 +1,6 @@
-[![Build Status](https://travis-ci.org/gvn/foxlight.svg?branch=master)](https://travis-ci.org/gvn/foxlight)
+[![Build Status](https://travis-ci.org/mozilla/foxlight.svg?branch=master)](https://travis-ci.org/mozilla/foxlight)
+[![dependency Status](https://img.shields.io/david/mozilla/foxlight.svg)](https://david-dm.org/mozilla/foxlight#info=dependencies)
+[![devDependency Status](https://img.shields.io/david/dev/mozilla/foxlight.svg)](https://david-dm.org/mozilla/foxlight#info=devDependencies)
 
 # Foxlight
 
@@ -10,7 +12,7 @@
 
 Run the following commands in your terminal:
 
-1. `git clone https://github.com/gvn/foxlight.git && cd foxlight`
+1. `git clone https://github.com/mozilla/foxlight.git && cd foxlight`
 2. `npm i`
 3. `npm start`
 
@@ -37,4 +39,4 @@ src/
 
 To lint your Sass code, run `npm run test:sass`
 
-[Travis](https://travis-ci.org/gvn/foxlight) is connected to this task and your pull requests will fail if this test doesn't pass locally.
+[Travis](https://travis-ci.org/mozilla/foxlight) is connected to this task and your pull requests will fail if this test doesn't pass locally.
