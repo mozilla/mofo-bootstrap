@@ -1,4 +1,3 @@
-[![Code Climate](https://codeclimate.com/github/gvn/foxlight/badges/gpa.svg)](https://codeclimate.com/github/gvn/foxlight)
 [![Build Status](https://travis-ci.org/gvn/foxlight.svg?branch=master)](https://travis-ci.org/gvn/foxlight)
 
 # Foxlight
