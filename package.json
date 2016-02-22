@@ -1,8 +1,11 @@
 {
   "name": "foxlight",
   "version": "0.1.0",
-  "description": "Mozilla Foundation Bootstrap theme.",
-  "main": "index.js",
+  "homepage": "https://github.com/mozilla/foxlight",
+  "bugs": "https://github.com/mozilla/foxlight/issues",
+  "description": "Mozilla Foundation's Bootstrap 4 theme.",
+  "keywords": ["bootstrap", "mozilla", "css", "sass", "theme"],
+  "repository": "mozilla/foxlight",
   "scripts": {
     "start": "npm run build && npm-run-all --parallel server watch:**",
     "build": "mkdirp dest/css/ && npm-run-all --parallel build:**",
