@@ -31,10 +31,8 @@ html
 
       mixin text-block(weight, value)
         div(class='text-block text-block-#{weight}')
-          h1 Fira Sans
+          h6 Fira Sans #{value}
           h5 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890
-          .meta 
-            p.value Fira Sans #{value}
 
       p.lead Primary Palette
 
@@ -61,45 +59,73 @@ html
         +text-block('300', 'Medium')
         +text-block('200', 'Regular')
         +text-block('100', 'Light')
-      
+
       hr
       h2.display-4 Headings
-      
+
       .typography
         .hero-unit
           h1 Hero Headline
           h2 Hero Headline 2
-          
+
         .type-unit
           h1 Headline 1
           p.meta 3.8rem, Fira Sans Bold
-        
+
         .type-unit
           h2 Headline 2
           p.meta 3.5rem, Fira Sans Regular
-        
+
         .type-unit
           h3 Headline 3
           p.meta 2.6rem, Fira Sans Medium
-        
+
         .type-unit
           h4 Headline 4
           p.meta 1.8rem, Fira Sans SemiBold
-        
+
         .type-unit
           p.copy Body Copy Text
           p.meta .copy, 1.4rem, Fira Sans Medium
-        
+
         .type-unit
           a(href="#") Link Text
           p.meta 1.4rem, Fira Sans Medium
-        
+
         .type-unit
           p.small Small copy for notes and additional descriptive details
           p.meta .small, 1rem, Fira Sans Medium
-        
+
         .type-unit
           p.intro This is introductory text for a new section of content near the top of the page. Teach how to read, write, and participate on the Web.
           p.meta .intro, 3rem, Fira Sans Regular
-        
+
+        .type-unit
+          p.lead Make a paragraph stand out by adding .lead.
+          p.meta .lead
+
+        .type-unit
+          blockquote.blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+          p.meta .blockquote
+
+      h2.display-4 Lists
+
+      h5 Unstyled List (ul.list-unstyled)
+
+      ul.list-unstyled
+        li Item 1
+        li Item 2
+        li Item 3
+        li Item 4
+        li Item 5
+
+      h5 Inline List (ul.list-inline)
+
+      ul.list-inline
+        li.list-inline-item Item 1
+        li.list-inline-item Item 2
+        li.list-inline-item Item 3
+        li.list-inline-item Item 4
+        li.list-inline-item Item 5
+
     footer
