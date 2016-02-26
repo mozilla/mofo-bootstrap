@@ -8,6 +8,16 @@
 
 *Under heavy construction. Don't use this in production quite yet!*
 
+## Usage
+
+For the moment it's recommended that you use one of two methods to include the compiled Foxlight CSS in your project:
+
+1. Include the library in your `package.json` for an npm-managed project. Your `package.json` should have a `dependencies` member that looks like this: `"foxlight": "https://github.com/mozilla/foxlight#gh-pages"`. You can then point your build system (eg: Webpack) to `node_modules/foxlight/dest/css/foxlight.css`. This is currently the recommended approach.
+
+2. Hotlink to the raw compiled CSS file on Github at `http://mozilla.github.io/foxlight/dest/css/foxlight.css` from your HTML. This is *not* recommended for production, but is OK for prototyping or test purposes. Eventually we will put the CSS on a proper CDN.
+
+It's not currently advisable that you extend and compile the Foxlight SCSS in your project. SCSS doesn't ([currently](https://github.com/sass/sass/issues/739)) allow for dynamic import paths, which complicates things when Foxlight becomes a module. We're working on a reasonable approach for allowing this...
+
 ## Setup for Development
 
 Run the following commands in your terminal:
