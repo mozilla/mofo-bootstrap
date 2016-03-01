@@ -4645,13 +4645,12 @@ a.bg-danger:focus, a.bg-danger:hover {
     min-height: 100px;
     color: #fff; }
 
-.meta {
-  text-align: center; }
-  .meta > * {
-    padding: 10px 0 0;
-    margin: 0; }
-  .meta .value {
-    color: #7e8188; }
+.meta > * {
+  padding: 10px 0 0;
+  margin: 0; }
+
+.meta .value {
+  color: #7e8188; }
 
 .text-block {
   margin: 2rem 0;
@@ -4678,10 +4677,8 @@ a.bg-danger:focus, a.bg-danger:hover {
   text-align: left; }
   .typography > * {
     margin: 30px 0; }
-  .typography .type-unit {
-    color: #a6a8ac; }
   .typography .meta {
-    text-align: left; }
+    color: #a6a8ac; }
 
 .color-block-guided-green .darker {
   background: #2c7c5d; }
