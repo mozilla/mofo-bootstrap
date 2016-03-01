@@ -1,0 +1,78 @@
+h1 {
+  font-size: 3.8rem;
+  line-height: 4.2rem;
+  letter-spacing: -0.15rem;
+  font-weight: 500;
+  color: $charcoal;
+}
+
+h2 {
+  font-size: 3.5rem;
+  line-height: 3.9rem;
+  letter-spacing: -0.15rem;
+  font-weight: 200;
+  color: $charcoal;
+}
+
+h3 {
+  font-size: 2.6rem;
+  line-height: 3rem;
+  letter-spacing: -0.15rem;
+  font-weight: 300;
+  color: $charcoal;
+}
+
+h4 {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  letter-spacing: -0.1rem;
+  font-weight: 400;
+  color: $charcoal;
+}
+
+.copy {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 300;
+  color: $charcoal;
+}
+
+a {
+  &:link {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 300;
+    color: $knowledge-navy;
+  }
+}
+
+.small {
+  font-size: 1rem;
+  line-height: 1.8rem;
+  font-weight: 300;
+  color: $charcoal;
+}
+
+.intro {
+  font-size: 3rem;
+  line-height: 3.7rem;
+  letter-spacing: -0.1rem;
+  font-weight: 200;
+  color: $charcoal;
+}
+
+.hero-unit {
+  h1 {
+    color: $white;
+    text-shadow: 1px 3px transparentize($black, .6);
+    font-size: 4.5rem;
+    font-weight: 600;
+  }
+
+  h2 {
+    color: $white;
+    text-shadow: 1px 3px transparentize($black, .6);
+    font-size: 2.6rem;
+    font-weight: 100;
+  }
+}
