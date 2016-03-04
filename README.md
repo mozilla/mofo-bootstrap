@@ -1,8 +1,8 @@
-[![Build Status](https://travis-ci.org/mozilla/foxlight.svg?branch=master)](https://travis-ci.org/mozilla/foxlight)
-[![dependency Status](https://img.shields.io/david/mozilla/foxlight.svg)](https://david-dm.org/mozilla/foxlight#info=dependencies)
-[![devDependency Status](https://img.shields.io/david/dev/mozilla/foxlight.svg)](https://david-dm.org/mozilla/foxlight#info=devDependencies)
+[![Build Status](https://travis-ci.org/mozilla/mozmaker.svg?branch=master)](https://travis-ci.org/mozilla/mozmaker)
+[![dependency Status](https://img.shields.io/david/mozilla/mozmaker.svg)](https://david-dm.org/mozilla/mozmaker#info=dependencies)
+[![devDependency Status](https://img.shields.io/david/dev/mozilla/mozmaker.svg)](https://david-dm.org/mozilla/mozmaker#info=devDependencies)
 
-# Foxlight
+# Mozmaker
 
 **Mozilla Foundation Bootstrap 4 theme.**
 
@@ -10,19 +10,19 @@
 
 ## Usage
 
-For the moment it's recommended that you use one of two methods to include the compiled Foxlight CSS in your project:
+For the moment it's recommended that you use one of two methods to include the compiled Mozmaker CSS in your project:
 
-1. Include the library in your `package.json` for an npm-managed project. Your `package.json` should have a `dependencies` member that looks like this: `"foxlight": "https://github.com/mozilla/foxlight#gh-pages"`. You can then point your build system (eg: Webpack) to `node_modules/foxlight/dest/css/foxlight.css`. This is currently the recommended approach.
+1. Include the library in your `package.json` for an npm-managed project. Your `package.json` should have a `dependencies` member that looks like this: `"mozmaker": "https://github.com/mozilla/mozmaker#gh-pages"`. You can then point your build system (eg: Webpack) to `node_modules/mozmaker/dest/css/mozmaker.css`. This is currently the recommended approach.
 
-2. Hotlink to the raw compiled CSS file on Github at `http://mozilla.github.io/foxlight/dest/css/foxlight.css` from your HTML. This is *not* recommended for production, but is OK for prototyping or test purposes. Eventually we will put the CSS on a proper CDN.
+2. Hotlink to the raw compiled CSS file on Github at `http://mozilla.github.io/mozmaker/dest/css/mozmaker.css` from your HTML. This is *not* recommended for production, but is OK for prototyping or test purposes. Eventually we will put the CSS on a proper CDN.
 
-It's not currently advisable that you extend and compile the Foxlight SCSS in your project. SCSS doesn't ([currently](https://github.com/sass/sass/issues/739)) allow for dynamic import paths, which complicates things when Foxlight becomes a module. We're working on a reasonable approach for allowing this...
+It's not currently advisable that you extend and compile the Mozmaker SCSS in your project. SCSS doesn't ([currently](https://github.com/sass/sass/issues/739)) allow for dynamic import paths, which complicates things when Mozmaker becomes a module. We're working on a reasonable approach for allowing this...
 
 ## Setup for Development
 
 Run the following commands in your terminal:
 
-1. `git clone https://github.com/mozilla/foxlight.git && cd foxlight`
+1. `git clone https://github.com/mozilla/mozmaker.git && cd mozmaker`
 2. `npm i`
 3. `npm start`
 
@@ -36,7 +36,7 @@ src/
     ├── custom/ <- SCSS modules for non-Bootstrap components.
     ├── overrides/ <- SCSS modules that override or extend Bootstrap components.
     ├── demo.scss <- SCSS specific to the demo page.
-    └── foxlight.scss <- Primary entry point that defines all imports.
+    └── mozmaker.scss <- Primary entry point that defines all imports.
 ```
 
 ## File Naming Conventions
@@ -49,4 +49,4 @@ src/
 
 To lint your Sass code, run `npm run test:sass`
 
-[Travis](https://travis-ci.org/mozilla/foxlight) is connected to this task and your pull requests will fail if this test doesn't pass locally.
+[Travis](https://travis-ci.org/mozilla/mozmaker) is connected to this task and your pull requests will fail if this test doesn't pass locally.
