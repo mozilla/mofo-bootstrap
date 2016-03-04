@@ -98,12 +98,12 @@ a {
 }
 
 ul {
-  padding-left: 14px;
-  line-height: 32px;
+  padding-left: 1rem;
+  line-height: 3rem;
   &.no-list-style {
     list-style-type: none;
   }
   li {
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
   }
 }
