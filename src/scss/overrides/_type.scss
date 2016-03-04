@@ -30,7 +30,8 @@ h4 {
   color: $charcoal;
 }
 
-p, li {
+p,
+li {
   font-size: 1.2rem;
   line-height: 1.8rem;
   font-weight: 300;
@@ -88,10 +89,16 @@ a {
 }
 
 .jumbotron {
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: $white;
     margin: 0;
   }
+
   h4 {
     opacity: 0.6;
   }
@@ -100,9 +107,11 @@ a {
 ul {
   padding-left: 1rem;
   line-height: 3rem;
+
   &.no-list-style {
     list-style-type: none;
   }
+
   li {
     margin-bottom: 1rem;
   }
