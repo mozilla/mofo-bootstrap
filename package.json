@@ -11,7 +11,7 @@
     "sass",
     "theme"
   ],
-  "repository": "mozilla/mozmaker",
+  "repository": "https://github.com/mozilla/mozmaker",
   "scripts": {
     "start": "npm run build && npm-run-all --parallel server watch:**",
     "build": "mkdirp dest/css/ && npm-run-all --parallel build:**",
