@@ -13,7 +13,7 @@
   ],
   "repository": "https://github.com/mozilla/mozmaker",
   "scripts": {
-    "preversion": "npm test",
+    "preversion": "git checkout master && git pull mozilla master && npm test",
     "version": "npm run build && git add -f dest",
     "postversion": "git rm -r dest && git commit --amend -m 'bump' && git push mozilla --tags",
     "start": "npm run build && npm-run-all --parallel server watch:**",
