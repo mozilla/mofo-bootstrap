@@ -15,7 +15,7 @@
   "scripts": {
     "preversion": "git checkout master && git pull mozilla master && npm test",
     "version": "npm run build && git add -f dest",
-    "postversion": "git rm -r dest && git commit --amend -m 'bump' && git push mozilla master && git push mozilla --tags && npm publish",
+    "postversion": "npm publish && git push mozilla --tags && git rm -r dest && git commit --amend -m 'bump' && git push mozilla master",
     "start": "npm run build && npm-run-all --parallel server watch:**",
     "build": "mkdirp dest/css/ && npm-run-all --parallel build:**",
     "build:jade": "jade src/index.jade -o demo",
