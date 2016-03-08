@@ -1,6 +1,6 @@
 {
   "name": "mozmaker",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "homepage": "https://github.com/mozilla/mozmaker",
   "bugs": "https://github.com/mozilla/mozmaker/issues",
   "description": "Mozilla Foundation's Bootstrap 4 theme.",
