@@ -13,6 +13,9 @@
   ],
   "repository": "https://github.com/mozilla/mozmaker",
   "scripts": {
+    "preversion": "npm test",
+    "version": "npm run build && git add -f dest",
+    "postversion": "git push && git push --tags",
     "start": "npm run build && npm-run-all --parallel server watch:**",
     "build": "mkdirp dest/css/ && npm-run-all --parallel build:**",
     "build:jade": "jade src/index.jade -o demo",
