@@ -12,8 +12,7 @@
 
 For the moment it's recommended that you use one of two methods to include the compiled Mozmaker CSS in your project:
 
-1. Include the library in your `package.json` for an npm-managed project. Your `package.json` should have a `dependencies` member that looks like this: `"mozmaker": "https://github.com/mozilla/mozmaker#gh-pages"`. You can then point your build system (eg: Webpack) to `node_modules/mozmaker/dest/css/mozmaker.css`. This is currently the recommended approach.
-
+1. Include the library in your `package.json` for an npm-managed project by running `npm install mozmaker --save`. You can then point your build system at the compiled CSS which resides at `node_modules/mozmaker/dest/css/mozmaker.css`. This is the preferred method.
 2. Hotlink to the raw compiled CSS file on Github at `http://mozilla.github.io/mozmaker/dest/css/mozmaker.css` from your HTML. This is *not* recommended for production, but is OK for prototyping or test purposes. Eventually we will put the CSS on a proper CDN.
 
 It's not currently advisable that you extend and compile the Mozmaker SCSS in your project. SCSS doesn't ([currently](https://github.com/sass/sass/issues/739)) allow for dynamic import paths, which complicates things when Mozmaker becomes a module. We're working on a reasonable approach for allowing this...
