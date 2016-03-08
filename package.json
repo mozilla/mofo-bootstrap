@@ -1,6 +1,6 @@
 {
   "name": "mozmaker",
-  "version": "0.1.0",
+  "version": "0.2.7",
   "homepage": "https://github.com/mozilla/mozmaker",
   "bugs": "https://github.com/mozilla/mozmaker/issues",
   "description": "Mozilla Foundation's Bootstrap 4 theme.",
@@ -13,6 +13,9 @@
   ],
   "repository": "https://github.com/mozilla/mozmaker",
   "scripts": {
+    "preversion": "git checkout master && git pull mozilla master && npm test",
+    "version": "npm run build && git add -f dest",
+    "postversion": "npm publish && git push mozilla --tags && git rm -r dest && git commit --amend --no-edit && git push mozilla master",
     "start": "npm run build && npm-run-all --parallel server watch:**",
     "build": "mkdirp dest/css/ && npm-run-all --parallel build:**",
     "build:jade": "jade src/index.jade -o demo",
