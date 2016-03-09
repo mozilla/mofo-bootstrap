@@ -1,30 +1,41 @@
 h1 {
+  margin: 20px 0;
   font-size: 3rem;
-  line-height: 3.8rem;
+  line-height: 1.2;
   letter-spacing: -0.1rem;
   font-weight: 400;
   color: $charcoal;
 }
 
+.header-headline {
+  margin-bottom: 30px;
+  padding: 15px 0 10px 0;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+}
+
 h2 {
+  margin: 20px 0 10px 0;
   font-size: 2.8rem;
-  line-height: 4.2rem;
+  line-height: 1.2;
   letter-spacing: -0.1rem;
   font-weight: 200;
   color: $charcoal;
 }
 
 h3 {
+  margin: 20px 0;
   font-size: 2.6rem;
-  line-height: 3rem;
+  line-height: 1.2;
   letter-spacing: -0.15rem;
   font-weight: 300;
   color: $charcoal;
 }
 
 h4 {
+  margin: 20px 0;
   font-size: 1.4rem;
-  line-height: 2.6rem;
+  line-height: 1.2;
   letter-spacing: -0.05rem;
   font-weight: 400;
   color: $charcoal;
@@ -42,8 +53,8 @@ strong {
 }
 
 .copy {
-  font-size: 1.4rem;
-  line-height: 2rem;
+  font-size: 1.5rem;
+  line-height: 1.4;
   font-weight: 300;
   color: $charcoal;
 }
@@ -59,7 +70,7 @@ a {
 
 .small {
   font-size: 1rem;
-  line-height: 1.8rem;
+  line-height: 1.5;
   font-weight: 300;
   color: $charcoal;
 }
@@ -109,10 +120,11 @@ ul {
   line-height: 3rem;
 
   &.no-list-style {
+    margin-top: 30px;
     list-style-type: none;
   }
 
   li {
-    margin-bottom: 1rem;
+    margin-bottom: 0.6rem;
   }
 }
