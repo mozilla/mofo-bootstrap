@@ -49,3 +49,9 @@ src/
 To lint your Sass code, run `npm run test:sass`
 
 [Travis](https://travis-ci.org/mozilla/mozmaker) is connected to this task and your pull requests will fail if this test doesn't pass locally.
+
+## Deploying
+
+To deploy to `gh-pages` first ensure that you have `mozilla` (mozilla/mozmaker) set up as a remote.
+
+If you have push access, simply run `npm run deploy` to build the latest code on `mozilla/master` and push it to `gh-pages`.

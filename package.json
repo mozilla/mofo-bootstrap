@@ -24,7 +24,8 @@
     "watch:jade": "chokidar 'src/index.jade' -c 'npm run build:jade'",
     "watch:scss": "chokidar 'src/scss/**/*.scss' -c 'npm run build:scss'",
     "test": "npm run test:sass",
-    "test:sass": "sass-lint -c node_modules/mofo-style/.sass-lint.yml --verbose --no-exit src/scss/**/*.scss"
+    "test:sass": "sass-lint -c node_modules/mofo-style/.sass-lint.yml --verbose --no-exit src/scss/**/*.scss",
+    "deploy": "./deploy.sh"
   },
   "author": "Mozilla",
   "license": "MPL-2.0",
