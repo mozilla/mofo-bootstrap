@@ -1,10 +1,13 @@
 h1 {
   margin: 20px 0;
   font-size: 3rem;
-  line-height: 1.2;
+  line-height: 1;
   letter-spacing: -0.1rem;
   font-weight: 400;
   color: $charcoal;
+  @include media-breakpoint-up(sm) {
+    line-height: 1.2;
+  }
 }
 
 .header-headline {
@@ -17,28 +20,37 @@ h1 {
 h2 {
   margin: 20px 0 10px 0;
   font-size: 2.8rem;
-  line-height: 1.2;
+  line-height: 1;
   letter-spacing: -0.1rem;
   font-weight: 200;
   color: $charcoal;
+  @include media-breakpoint-up(sm) {
+    line-height: 1.2;
+  }
 }
 
 h3 {
   margin: 20px 0;
   font-size: 2.6rem;
-  line-height: 1.2;
+  line-height: 1;
   letter-spacing: -0.15rem;
   font-weight: 300;
   color: $charcoal;
+  @include media-breakpoint-up(sm) {
+    line-height: 1.2;
+  }
 }
 
 h4 {
   margin: 20px 0;
   font-size: 1.4rem;
-  line-height: 1.2;
+  line-height: 1;
   letter-spacing: -0.05rem;
   font-weight: 400;
   color: $charcoal;
+  @include media-breakpoint-up(sm) {
+    line-height: 1.2;
+  }
 }
 
 p,
