@@ -5,7 +5,7 @@ h1 {
   letter-spacing: -0.1rem;
   font-weight: 400;
   color: $charcoal;
-  @media screen and (min-width: 544px) {
+  @include media-breakpoint-up(sm) {
     line-height: 1.2;
   }
 }
@@ -24,7 +24,7 @@ h2 {
   letter-spacing: -0.1rem;
   font-weight: 200;
   color: $charcoal;
-  @media screen and (min-width: 544px) {
+  @include media-breakpoint-up(sm) {
     line-height: 1.2;
   }
 }
@@ -36,7 +36,7 @@ h3 {
   letter-spacing: -0.15rem;
   font-weight: 300;
   color: $charcoal;
-  @media screen and (min-width: 544px) {
+  @include media-breakpoint-up(sm) {
     line-height: 1.2;
   }
 }
@@ -48,7 +48,7 @@ h4 {
   letter-spacing: -0.05rem;
   font-weight: 400;
   color: $charcoal;
-  @media screen and (min-width: 544px) {
+  @include media-breakpoint-up(sm) {
     line-height: 1.2;
   }
 }
