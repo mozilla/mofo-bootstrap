@@ -33,7 +33,7 @@ h3 {
   margin: 20px 0;
   font-size: 2.6rem;
   line-height: 1;
-  letter-spacing: -0.15rem;
+  letter-spacing: -0.1rem;
   font-weight: 300;
   color: $charcoal;
   @include media-breakpoint-up(sm) {
@@ -66,19 +66,38 @@ strong {
 
 .copy {
   font-size: 1.5rem;
-  line-height: 1.4;
+  line-height: 1.5;
   font-weight: 300;
   color: $charcoal;
 }
 
 a {
   &:link {
-    font-size: 1.2rem;
+    font-size: inherit;
     line-height: 1.6rem;
     font-weight: 300;
-    color: $knowledge-navy;
+    color: $developer-blue;
+  }
+
+  &.button {
+    display: inline-block;
+    margin: 10px 0 0 0;
+    padding: 15px 20px;
+    background: $developer-blue;
+    font-size: 1rem;
+    line-height: 1;
+    color: $white;
+    border-radius: 5px;
+
+    &:hover {
+      color: $white;
+      text-decoration: none;
+      background: lighten($developer-blue, 5%);
+    }
   }
 }
+
+
 
 .small {
   font-size: 1rem;
@@ -127,8 +146,9 @@ a {
   }
 }
 
+ol,
 ul {
-  padding-left: 1rem;
+  padding-left: 1.2rem;
   line-height: 3rem;
 
   &.no-list-style {
@@ -137,6 +157,16 @@ ul {
   }
 
   li {
-    margin-bottom: 0.6rem;
+    margin: 20px 0;
   }
+}
+
+ol {
+  li {
+    margin: 20px 0;
+  }
+}
+
+.margin-bottom-60 {
+  margin-bottom: 60px;
 }
