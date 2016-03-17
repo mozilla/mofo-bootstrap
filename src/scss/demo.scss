@@ -127,6 +127,10 @@
   @include colorBlockChildren($gecko-green);
 }
 
+.color-block-summit-teal {
+  @include colorBlockChildren($summit-teal);
+}
+
 .color-block-mobile-blue {
   @include colorBlockChildren($mobile-blue);
 }
