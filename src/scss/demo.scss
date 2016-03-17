@@ -107,28 +107,48 @@
   }
 }
 
-.color-block-guided-green {
-  @include colorBlockChildren($guided-green);
+.color-block-dino-red {
+  @include colorBlockChildren($dino-red);
 }
 
-.color-block-maker-magenta {
-  @include colorBlockChildren($maker-magenta);
+.color-block-firefox-orange {
+  @include colorBlockChildren($firefox-orange);
 }
 
-.color-block-knowledge-navy {
-  @include colorBlockChildren($knowledge-navy);
+.color-block-market-orange {
+  @include colorBlockChildren($market-orange);
 }
 
-.color-block-brilliant-blue {
-  @include colorBlockChildren($brilliant-blue);
+.color-block-flame-yellow {
+  @include colorBlockChildren($flame-yellow);
 }
 
-.color-block-teach-teal {
-  @include colorBlockChildren($teach-teal);
+.color-block-gecko-green {
+  @include colorBlockChildren($gecko-green);
 }
 
-.color-block-youth-yellow {
-  @include colorBlockChildren($youth-yellow);
+.color-block-summit-teal {
+  @include colorBlockChildren($summit-teal);
+}
+
+.color-block-mobile-blue {
+  @include colorBlockChildren($mobile-blue);
+}
+
+.color-block-developer-blue {
+  @include colorBlockChildren($developer-blue);
+}
+
+.color-block-nightly-blue {
+  @include colorBlockChildren($nightly-blue);
+}
+
+.color-block-aurora-purple {
+  @include colorBlockChildren($aurora-purple);
+}
+
+.color-block-bikeshed-magenta {
+  @include colorBlockChildren($bikeshed-magenta);
 }
 
 .color-block-charcoal {
