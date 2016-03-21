@@ -170,3 +170,17 @@
 @include textBlock(300);
 @include textBlock(200);
 @include textBlock(100);
+
+.important-links {
+  li {
+    background: lighten($dino-red, 40%);
+
+    a {
+      color: darken($dino-red, 10%);
+
+      &:hover {
+        background: lighten($dino-red, 30%);
+      }
+    }
+  }
+}
