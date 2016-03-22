@@ -148,8 +148,17 @@ a {
 
 ol,
 ul {
-  padding-left: 1.2rem;
   line-height: 3rem;
+  padding: 0;
+
+  &.two-column {
+    column-count: 1;
+    column-gap: 0;
+    @include media-breakpoint-up(sm) {
+      column-count: 2;
+      column-gap: 50px;
+    }
+  }
 
   &.no-list-style {
     margin-top: 30px;
@@ -158,12 +167,22 @@ ul {
 
   li {
     margin: 20px 0;
-  }
-}
 
-ol {
-  li {
-    margin: 20px 0;
+    &.item {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      flex-direction: row;
+    }
+  }
+
+  .content {
+    margin: 10px 0;
+
+    p {
+      margin: 0;
+      max-width: 440px;
+    }
   }
 }
 

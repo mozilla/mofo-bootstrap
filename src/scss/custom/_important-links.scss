@@ -1,0 +1,41 @@
+.important-links {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 0 -10px 30px -10px;
+  @media screen and (min-width: 544px) {
+    flex-direction: row;
+  }
+
+  li {
+    list-style-type: none;
+    flex: 1;
+    margin: 10px;
+    min-height: 100px;
+    display: flex;
+    align-content: stretch;
+    align-items: stretch;
+    border-radius: 5px;
+
+    &:before {
+      display: none;
+    }
+
+    a {
+      display: block;
+      padding: 10px 14px;
+      border-radius: 2px;
+      font-size: 1rem;
+      line-height: 1.2rem;
+      font-weight: 400;
+      text-decoration: none;
+      flex: 1;
+
+      &:hover {
+        cursor: pointer;
+      }
+   }
+  }
+}
