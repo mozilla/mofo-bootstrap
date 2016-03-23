@@ -2,6 +2,11 @@
 
 @import 'mozmaker';
 
+.jumbotron {
+  background: $charcoal;
+  color: $white;
+}
+
 .color-blocks {
   display: flex;
   margin-bottom: 2rem;
@@ -74,7 +79,7 @@
 }
 
 .intro {
-  width: 60vw;
+  // width: 60vw;
 }
 
 .typography {
@@ -86,6 +91,34 @@
 
   .meta {
     color: lighten($charcoal, 35%);
+  }
+}
+
+.important-links {
+  li {
+    background: lighten($dino-red, 40%);
+
+    a {
+      color: darken($dino-red, 10%);
+
+      &:hover {
+        background: lighten($dino-red, 30%);
+      }
+    }
+  }
+}
+
+.color-box {
+
+  .btn {
+    background: $dino-red;
+    box-shadow: 0 2px 0 darken($dino-red, 10%);
+    color: $white;
+    transition: background 0.2s ease-in-out;
+
+    &:hover {
+      background: darken($dino-red, 10%);
+    }
   }
 }
 
@@ -170,17 +203,3 @@
 @include textBlock(300);
 @include textBlock(200);
 @include textBlock(100);
-
-.important-links {
-  li {
-    background: lighten($dino-red, 40%);
-
-    a {
-      color: darken($dino-red, 10%);
-
-      &:hover {
-        background: lighten($dino-red, 30%);
-      }
-    }
-  }
-}
