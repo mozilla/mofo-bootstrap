@@ -1,0 +1,46 @@
+.btn {
+  border-radius: 0;
+  background: $white;
+  border: 1px solid;
+  color: $developer-blue;
+  text-transform: uppercase;
+}
+
+@mixin color-button($color) {
+  color: $color;
+
+  &:focus,
+  &:hover {
+    color: $white;
+    background: $color;
+    border-color: darken($color, 10%);
+  }
+}
+
+.btn-primary {
+  @include color-button($nightly-blue);
+}
+
+.btn-secondary {
+  @include color-button($aurora-purple);
+}
+
+.btn-success {
+  @include color-button($gecko-green);
+}
+
+.btn-info {
+  @include color-button($mobile-blue);
+}
+
+.btn-warning {
+  @include color-button($market-orange);
+}
+
+.btn-danger {
+  @include color-button($dino-red);
+}
+
+.btn-link {
+  border: 0;
+}
