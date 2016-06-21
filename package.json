@@ -1,6 +1,6 @@
 {
   "name": "mofo-bootstrap",
-  "version": "0.8.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/mozilla/mofo-bootstrap",
   "bugs": "https://github.com/mozilla/mofo-bootstrap/issues",
   "description": "Mozilla Foundation's Bootstrap 4 theme.",
