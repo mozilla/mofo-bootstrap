@@ -1,8 +1,8 @@
 {
-  "name": "mozmaker",
+  "name": "mofo-bootstrap",
   "version": "0.8.0",
-  "homepage": "https://github.com/mozilla/mozmaker",
-  "bugs": "https://github.com/mozilla/mozmaker/issues",
+  "homepage": "https://github.com/mozilla/mofo-bootstrap",
+  "bugs": "https://github.com/mozilla/mofo-bootstrap/issues",
   "description": "Mozilla Foundation's Bootstrap 4 theme.",
   "keywords": [
     "bootstrap",
@@ -11,7 +11,7 @@
     "sass",
     "theme"
   ],
-  "repository": "https://github.com/mozilla/mozmaker",
+  "repository": "https://github.com/mozilla/mofo-bootstrap",
   "scripts": {
     "preversion": "git checkout master && git pull mozilla master && npm test",
     "version": "npm run build && git add -f dest",
@@ -19,7 +19,7 @@
     "start": "npm run build && npm-run-all --parallel server watch:**",
     "build": "mkdirp dest/css/ && npm-run-all --parallel build:**",
     "build:jade": "jade src/index.jade -o demo",
-    "build:scss": "node-sass src/scss/mozmaker.scss dest/css/mozmaker.css && node-sass src/scss/demo.scss demo/css/demo.css",
+    "build:scss": "node-sass src/scss/mofo-bootstrap.scss dest/css/mofo-bootstrap.css && node-sass src/scss/demo.scss demo/css/demo.css",
     "server": "live-server ./demo --port=1979",
     "watch:jade": "chokidar 'src/index.jade' -c 'npm run build:jade'",
     "watch:scss": "chokidar 'src/scss/**/*.scss' -c 'npm run build:scss'",
