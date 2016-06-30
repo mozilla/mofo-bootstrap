@@ -14,6 +14,8 @@ html
         h1.display-3 mofo-bootstrap
         p.lead Mozilla Foundation Bootstrap 4 theme
         
+      hr
+      h2.display-4 Navbar
       nav.navbar.navbar-light.bg-faded
         button.navbar-toggler.hidden-sm-up(type='button', data-toggle='collapse', data-target='#exCollapsingNavbar2')
             | ☰
@@ -73,6 +75,58 @@ html
         +color-block('bikeshed-magenta', '#e14164')
         +color-block('charcoal', '#4d4f53')
 
+      hr
+      h2.display-4 Forms
+      form
+        fieldset.form-group
+            label(for='exampleInputEmail1') Email address
+            input#exampleInputEmail1.form-control(type='email', placeholder='Enter email')
+            small.text-muted We'll never share your email with anyone else.
+        fieldset.form-group
+            label(for='exampleInputPassword1') Password
+            input#exampleInputPassword1.form-control(type='password', placeholder='Password')
+        fieldset.form-group
+            label(for='exampleSelect1') Example select
+            select#exampleSelect1.form-control
+                option 1
+                option 2
+                option 3
+                option 4
+                option 5
+        fieldset.form-group
+            label(for='exampleSelect2') Example multiple select
+            select#exampleSelect2.form-control(multiple='')
+                option 1
+                option 2
+                option 3
+                option 4
+                option 5
+        fieldset.form-group
+            label(for='exampleTextarea') Example textarea
+            textarea#exampleTextarea.form-control(rows='3')
+        fieldset.form-group
+            label(for='exampleInputFile') File input
+            input#exampleInputFile.form-control-file(type='file')
+            small.text-muted
+                | This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.
+        .radio
+            label
+            input#optionsRadios1(type='radio', name='optionsRadios', value='option1', checked='')
+            |       Option one is this and that—be sure to include why it's great
+        .radio
+            label
+            input#optionsRadios2(type='radio', name='optionsRadios', value='option2')
+            |       Option two can be something else and selecting it will deselect option one
+        .radio.disabled
+            label
+            input#optionsRadios3(type='radio', name='optionsRadios', value='option3', disabled='')
+            |       Option three is disabled
+        .checkbox
+            label
+            input(type='checkbox')
+            |  Check me out
+        button.btn.btn-primary(type='submit') Submit
+        
       hr
       h2.display-4 Buttons
 
