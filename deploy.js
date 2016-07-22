@@ -22,11 +22,14 @@ var runDeploy = () => {
 
   shell.rm(`.gitignore`);
 
-  shell.echo(`node_modules/`).toEnd(`.gitignore`);
-  shell.echo(`.DS_Store`).toEnd(`.gitignore`);
+  shell.echo(`/*\n`).toEnd(`.gitignore`);
+  shell.echo(`!demo\n`).toEnd(`.gitignore`);
+  shell.echo(`!dest\n`).toEnd(`.gitignore`);
+  shell.echo(`!last-built.txt\n`).toEnd(`.gitignore`);
 
   shell.echo(new Date).to(`last-built.txt`);
 
+  shell.exec(`git reset`);
   shell.exec(`git add .`);
   shell.exec(`git commit -m 'deploy.js-ified'`);
   shell.exec(`git push mozilla gh-pages -f`);
