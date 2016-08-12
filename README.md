@@ -6,8 +6,6 @@
 
 **Mozilla Foundation Bootstrap 4 theme.**
 
-*Under heavy construction. Don't use this in production quite yet!*
-
 ## Usage
 
 For the moment it's recommended that you use one of two methods to include the compiled mofo-bootstrap CSS in your project:
