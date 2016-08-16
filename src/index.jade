@@ -13,6 +13,30 @@ html
       .jumbotron
         h1.display-3 mofo-bootstrap
         p.lead Mozilla Foundation Bootstrap 4 theme
+        
+      hr
+      h2.display-4 Navbar
+      nav.navbar.navbar-light.bg-faded
+        button.navbar-toggler.hidden-sm-up(type='button', data-toggle='collapse', data-target='#exCollapsingNavbar2')
+            | ☰
+        #exCollapsingNavbar2.collapse.navbar-toggleable-xs
+            a.navbar-brand(href='#') Mofo Bootstrap
+            ul.nav.navbar-nav
+                li.nav-item.active
+                    a.nav-link(href='#')
+                        | Home 
+                        span.sr-only (current)
+                li.nav-item
+                    a.nav-link(href='#') Features
+                li.nav-item.dropdown
+                    a.nav-link.dropdown-toggle(data-toggle='dropdown', href='#', role='button', aria-haspopup='true', aria-expanded='false', id='Preview')
+                        | Dropdown
+                    .dropdown-menu(aria-labelledby='Preview')
+                        a.dropdown-item(href='#') Dropdown Link 1
+                        a.dropdown-item(href='#') Dropdown Link 2
+                        a.dropdown-item(href='#') Dropdown Link 3
+                li.nav-item
+                    a.nav-link(href='#') About
 
       h2.display-4 Color
 
@@ -52,32 +76,86 @@ html
         +color-block('charcoal', '#4d4f53')
 
       hr
+      h2.display-4 Forms
+      form
+        fieldset.form-group
+            label(for='exampleInputEmail1') Email address
+            input#exampleInputEmail1.form-control(type='email', placeholder='Enter email')
+            small.text-muted We'll never share your email with anyone else.
+        fieldset.form-group
+            label(for='exampleInputPassword1') Password
+            input#exampleInputPassword1.form-control(type='password', placeholder='Password')
+        fieldset.form-group
+            label(for='exampleSelect1') Example select
+            select#exampleSelect1.form-control
+                option 1
+                option 2
+                option 3
+                option 4
+                option 5
+        fieldset.form-group
+            label(for='exampleSelect2') Example multiple select
+            select#exampleSelect2.form-control(multiple='')
+                option 1
+                option 2
+                option 3
+                option 4
+                option 5
+        fieldset.form-group
+            label(for='exampleTextarea') Example textarea
+            textarea#exampleTextarea.form-control(rows='3')
+        fieldset.form-group
+            label(for='exampleInputFile') File input
+            input#exampleInputFile.form-control-file(type='file')
+            small.text-muted
+                | This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.
+        .radio
+            label
+            input#optionsRadios1(type='radio', name='optionsRadios', value='option1', checked='')
+            |       Option one is this and that—be sure to include why it's great
+        .radio
+            label
+            input#optionsRadios2(type='radio', name='optionsRadios', value='option2')
+            |       Option two can be something else and selecting it will deselect option one
+        .radio.disabled
+            label
+            input#optionsRadios3(type='radio', name='optionsRadios', value='option3', disabled='')
+            |       Option three is disabled
+        .checkbox
+            label
+            input(type='checkbox')
+            |  Check me out
+        button.btn.btn-primary(type='submit') Submit
+        
+      hr
       h2.display-4 Buttons
 
-      .button-demo
-        p.lead .btn
-        a.btn Click Me
-        
-        p.lead .btn.btn-primary
-        a.btn.btn-primary Click Me
+      .button-demo.row
+        .col-sm-6
+            p.lead .btn
+            a.btn Click Me
+            
+            p.lead .btn.btn-primary
+            a.btn.btn-primary Click Me
 
-        p.lead .btn.btn-secondary
-        a.btn.btn-secondary Click Me
+            p.lead .btn.btn-secondary
+            a.btn.btn-secondary Click Me
+            
+            p.lead .btn.btn-success
+            a.btn.btn-success Click Me
         
-        p.lead .btn.btn-success
-        a.btn.btn-success Click Me
-        
-        p.lead .btn.btn-info
-        a.btn.btn-info Click Me
-        
-        p.lead .btn.btn-warning
-        a.btn.btn-warning Click Me
-        
-        p.lead .btn.btn-danger
-        a.btn.btn-danger Click Me
-        
-        p.lead .btn.btn-link
-        a.btn.btn-link Click Me
+        .col-sm-6
+            p.lead .btn.btn-info
+            a.btn.btn-info Click Me
+            
+            p.lead .btn.btn-warning
+            a.btn.btn-warning Click Me
+            
+            p.lead .btn.btn-danger
+            a.btn.btn-danger Click Me
+            
+            p.lead .btn.btn-link
+            a.btn.btn-link Click Me
       
       hr
       h2.display-4 Typography
@@ -171,28 +249,30 @@ html
         li: a Marketing your Mozilla Club: PR - Guide
         li: a Documenting your Event
 
-      section.col-md-12.intro
-        h1 Color Box Component
-        p.intro Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-      section.col-md-4
-        div.color-box
-          img(src='https://cloud.githubusercontent.com/assets/1119821/13996841/c8c64480-f105-11e5-8075-ac8d4d5df74a.png')
-          h3 Learn Structure
-          p.small Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Donec id elit.
-          a.btn.btn-lg.btn-default Open Project
+      .row
+        section.col-md-12.intro
+            h1 Color Box Component
+            p.intro Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+        section.col-md-4
+            div.color-box
+                img(src='https://cloud.githubusercontent.com/assets/1119821/13996841/c8c64480-f105-11e5-8075-ac8d4d5df74a.png')
+                h3 Learn Structure
+                p.small Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Donec id elit.
+                a.btn.btn-lg.btn-default Open Project
 
-      section.col-md-4
-        div.color-box
-          img(src='https://cloud.githubusercontent.com/assets/1119821/13996945/2e144062-f106-11e5-8951-b9aaca19c9ad.png')
-          h3 Learn Style
-          p.small Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Donec id elit.
-          a.btn.btn-lg.btn-default Open Project
+        section.col-md-4
+            div.color-box
+                img(src='https://cloud.githubusercontent.com/assets/1119821/13996945/2e144062-f106-11e5-8951-b9aaca19c9ad.png')
+                h3 Learn Style
+                p.small Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Donec id elit.
+                a.btn.btn-lg.btn-default Open Project
 
-      section.col-md-4
-        div.color-box
-          img(src='https://cloud.githubusercontent.com/assets/1119821/13996955/3982a97a-f106-11e5-9c5f-a456638a813d.png')
-          h3 Learn Interactivity
-          p.small Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Donec id elit.
-          a.btn.btn-lg.btn-default Open Project
+        section.col-md-4
+            div.color-box
+                img(src='https://cloud.githubusercontent.com/assets/1119821/13996955/3982a97a-f106-11e5-9c5f-a456638a813d.png')
+                h3 Learn Interactivity
+                p.small Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Donec id elit.
+                a.btn.btn-lg.btn-default Open Project
 
     footer
+
