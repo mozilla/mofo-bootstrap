@@ -1,3 +1,4 @@
+[![Uses Mofo Standards](https://MozillaFoundation.github.io/mofo-standards/badge.svg)](https://github.com/MozillaFoundation/mofo-standards)
 [![Build Status](https://travis-ci.org/mozilla/mofo-bootstrap.svg?branch=master)](https://travis-ci.org/mozilla/mofo-bootstrap)
 [![dependency Status](https://img.shields.io/david/mozilla/mofo-bootstrap.svg)](https://david-dm.org/mozilla/mofo-bootstrap#info=dependencies)
 [![devDependency Status](https://img.shields.io/david/dev/mozilla/mofo-bootstrap.svg)](https://david-dm.org/mozilla/mofo-bootstrap#info=devDependencies)
