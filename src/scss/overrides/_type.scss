@@ -1,191 +1,49 @@
-h1 {
-  margin: 20px 0;
-  font-size: 3rem;
-  line-height: 1;
-  letter-spacing: -0.1rem;
-  font-weight: 400;
-  color: $charcoal;
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  &:not(:first-child) {
+    margin-top: 1em;
+  }
   @include media-breakpoint-up(sm) {
     line-height: 1.2;
   }
 }
 
-.header-headline {
-  margin-bottom: 30px;
-  padding: 15px 0 10px 0;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-}
-
-h2 {
-  margin: 20px 0 10px 0;
-  font-size: 2.8rem;
-  line-height: 1;
-  letter-spacing: -0.1rem;
+h2, .h2 {
   font-weight: 200;
-  color: $charcoal;
-  @include media-breakpoint-up(sm) {
-    line-height: 1.2;
-  }
 }
 
-h3 {
-  margin: 20px 0;
-  font-size: 2.6rem;
-  line-height: 1;
-  letter-spacing: -0.1rem;
+h3, .h3 {
   font-weight: 300;
-  color: $charcoal;
-  @include media-breakpoint-up(sm) {
-    line-height: 1.2;
-  }
-}
-
-h4 {
-  margin: 20px 0;
-  font-size: 1.4rem;
-  line-height: 1;
-  letter-spacing: -0.05rem;
-  font-weight: 400;
-  color: $charcoal;
-  @include media-breakpoint-up(sm) {
-    line-height: 1.2;
-  }
-}
-
-p,
-li {
-  font-size: 1.2rem;
-  line-height: 1.8rem;
-  font-weight: 300;
-}
-
-strong {
-  font-weight: 400;
-}
-
-.copy {
-  font-size: 1.5rem;
-  line-height: 1.5;
-  font-weight: 300;
-  color: $charcoal;
-}
-
-a {
-  &:link {
-    font-size: inherit;
-    line-height: 1.6rem;
-    font-weight: 300;
-    color: $developer-blue;
-  }
-
-  &.button {
-    display: inline-block;
-    margin: 10px 0 0 0;
-    padding: 15px 20px;
-    background: $developer-blue;
-    font-size: 1rem;
-    line-height: 1;
-    color: $white;
-    border-radius: 5px;
-
-    &:hover {
-      color: $white;
-      text-decoration: none;
-      background: lighten($developer-blue, 5%);
-    }
-  }
-}
-
-
-
-.small {
-  font-size: 1rem;
-  line-height: 1.6;
-  font-weight: 300;
-  color: $charcoal;
 }
 
 .intro {
-  font-size: 1.6rem;
-  line-height: 2.6rem;
-  letter-spacing: -0.1rem;
   font-weight: 200;
-  color: $charcoal;
+  font-size: 1.6rem;
 }
 
-.hero-unit {
-  h1 {
-    color: $white;
-    text-shadow: 1px 3px transparentize($black, .6);
-    font-size: 4.5rem;
-    font-weight: 600;
-  }
+.display-1, .display-2 {
+  text-shadow: 1px 3px transparentize($black, .6);
+}
 
-  h2 {
-    color: $white;
-    text-shadow: 1px 3px transparentize($black, .6);
-    font-size: 2.6rem;
-    font-weight: 100;
-  }
+.display-2 {
+  font-weight: 100;
 }
 
 .jumbotron {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
     color: $white;
-    margin: 0;
   }
 
-  h4 {
+  h4, .h4 {
     opacity: 0.6;
   }
 }
 
-ol,
-ul {
-  line-height: 3rem;
-  padding: 0;
+li {
+  margin-bottom: $list-item-vertical-margin;
 
-  &.two-column {
-    column-count: 1;
-    column-gap: 0;
-    @include media-breakpoint-up(sm) {
-      column-count: 2;
-      column-gap: 50px;
-    }
+  ol, ul {
+    margin-top: $list-item-vertical-margin;
   }
-
-  &.no-list-style {
-    margin-top: 30px;
-    list-style-type: none;
-  }
-
-  li {
-    margin: 20px 0;
-
-    &.item {
-      display: flex;
-      flex-wrap: nowrap;
-      align-items: center;
-      flex-direction: row;
-    }
-  }
-
-  .content {
-    margin: 10px 0;
-
-    p {
-      margin: 0;
-      max-width: 440px;
-    }
-  }
-}
-
-.margin-bottom-60 {
-  margin-bottom: 60px;
 }
