@@ -28,13 +28,13 @@
     "watch:jade": "chokidar 'src/index.jade' -c 'npm run build:jade'",
     "watch:scss": "chokidar 'src/scss/**/*.scss' -c 'npm run build:scss'",
     "test": "npm run test:sass",
-    "test:sass": "sass-lint -c node_modules/mofo-style/.sass-lint.yml --verbose --no-exit src/scss/**/*.scss",
+    "test:sass": "sass-lint -c .sass-lint.yml --verbose --no-exit src/scss/**/*.scss",
     "deploy": "node deploy.js"
   },
   "author": "Mozilla",
   "license": "MPL-2.0",
   "dependencies": {
-    "bootstrap": "v4.0.0-alpha.2"
+    "bootstrap": "v4.0.0-alpha.5"
   },
   "devDependencies": {
     "chokidar": "^1.4.2",

@@ -1,0 +1,6 @@
+options:
+  config-file: node_modules/mofo-style/.sass-lint.yml
+files:
+  ignore: 'src/scss/overrides/_mixins.scss'
+rules:
+  single-line-per-selector: 1
