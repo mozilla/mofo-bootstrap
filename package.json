@@ -34,7 +34,7 @@
   "author": "Mozilla",
   "license": "MPL-2.0",
   "dependencies": {
-    "bootstrap": "v4.0.0-alpha.4"
+    "bootstrap": "v4.0.0-alpha.5"
   },
   "devDependencies": {
     "chokidar": "^1.4.2",
