@@ -19,7 +19,7 @@
   "scripts": {
     "preversion": "git checkout master && git pull origin master && npm test",
     "version": "npm run build",
-    "postversion": "npm publish && git push origin --tags",
+    "postversion": "npm publish && git push origin --tags && npm run deploy",
     "start": "npm run build && npm-run-all --parallel server watch:**",
     "build": "mkdirp dest/css/ && npm-run-all --parallel build:**",
     "build:jade": "jade src/index.jade -o demo",
