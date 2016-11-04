@@ -1,51 +1,30 @@
-var NodeGit = require(`nodegit`);
 var shell = require(`shelljs`);
-var pathToRepo = require(`path`).resolve(`.`);
 
-var getStatus = (repo) => {
-  return repo.getStatus();
-};
+shell.echo(`Running deployment now...`);
 
-var runDeploy = () => {
-  shell.echo(`Running deployment now...`);
+shell.exec(`git checkout master`);
+shell.exec(`git pull origin master`);
 
-  shell.exec(`git checkout master`);
-  shell.exec(`git pull mozilla master`);
+shell.rm(`-rf`,`node_modules`);
 
-  shell.rm(`-rf`,`node_modules`);
+shell.exec(`npm i`);
+shell.exec(`npm run build`);
 
-  shell.exec(`npm i`);
-  shell.exec(`npm run build`);
+shell.exec(`git branch -D gh-pages`);
+shell.exec(`git checkout --orphan gh-pages`);
 
-  shell.exec(`git branch -D gh-pages`);
-  shell.exec(`git checkout --orphan gh-pages`);
+shell.rm(`.gitignore`);
 
-  shell.rm(`.gitignore`);
+shell.echo(`/*\n`).toEnd(`.gitignore`);
+shell.echo(`!demo\n`).toEnd(`.gitignore`);
+shell.echo(`!dest\n`).toEnd(`.gitignore`);
+shell.echo(`!last-built.txt\n`).toEnd(`.gitignore`);
 
-  shell.echo(`/*\n`).toEnd(`.gitignore`);
-  shell.echo(`!demo\n`).toEnd(`.gitignore`);
-  shell.echo(`!dest\n`).toEnd(`.gitignore`);
-  shell.echo(`!last-built.txt\n`).toEnd(`.gitignore`);
+shell.echo(new Date).to(`last-built.txt`);
 
-  shell.echo(new Date).to(`last-built.txt`);
+shell.exec(`git reset`);
+shell.exec(`git add .`);
+shell.exec(`git commit -m 'deploy.js-ified'`);
+shell.exec(`git push origin gh-pages -f`);
 
-  shell.exec(`git reset`);
-  shell.exec(`git add .`);
-  shell.exec(`git commit -m 'deploy.js-ified'`);
-  shell.exec(`git push mozilla gh-pages -f`);
-
-  shell.echo(`Finished deploying!`);
-};
-
-// Check that local repo is clean before deploying
-
-NodeGit.Repository.open(pathToRepo)
-  .then(getStatus)
-  .then(status => {
-    if (status.length) {
-      shell.echo(`Repo is dirty. Aborting deploy!`);
-      shell.exit(1);
-    } else {
-      runDeploy();
-    }
-  });
+shell.echo(`Finished deploying!`);
