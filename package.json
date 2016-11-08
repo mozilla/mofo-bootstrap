@@ -17,9 +17,9 @@
   ],
   "repository": "https://github.com/mozilla/mofo-bootstrap",
   "scripts": {
-    "preversion": "git checkout master && git pull mozilla master && npm test",
-    "version": "npm run build && git add -f dest",
-    "postversion": "npm publish && git push mozilla --tags && git rm -r dest && git commit --amend --no-edit && git push mozilla master",
+    "preversion": "git checkout master && git pull origin master && npm test",
+    "version": "npm run build",
+    "postversion": "npm publish && git push origin --tags && npm run deploy",
     "start": "npm run build && npm-run-all --parallel server watch:**",
     "build": "mkdirp dest/css/ && npm-run-all --parallel build:**",
     "build:jade": "jade src/index.jade -o demo",
