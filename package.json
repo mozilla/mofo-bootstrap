@@ -44,7 +44,6 @@
     "mkdirp": "^0.5.1",
     "mofo-style": "^2.3.0",
     "ncp": "^2.0.0",
-    "nodegit": "^0.13.0",
     "node-sass": "^3.4.2",
     "npm-run-all": "^1.5.1",
     "sass-lint": "^1.5.0",
