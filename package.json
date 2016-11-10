@@ -21,7 +21,7 @@
     "version": "npm run build",
     "postversion": "npm publish && git push origin master --tags && npm run deploy",
     "start": "npm run build && npm-run-all --parallel server watch:**",
-    "build": "mkdirp dest/css/ && npm-run-all --parallel build:**",
+    "build": "shx mkdir -p dest/css/ && npm-run-all --parallel build:**",
     "build:jade": "jade src/index.jade -o demo",
     "build:scss": "node-sass src/scss/mofo-bootstrap.scss dest/css/mofo-bootstrap.css && node-sass src/scss/demo.scss demo/css/demo.css",
     "server": "live-server ./demo --port=1979",
@@ -41,12 +41,11 @@
     "chokidar-cli": "^1.2.0",
     "jade": "^1.11.0",
     "live-server": "^1.0.0",
-    "mkdirp": "^0.5.1",
     "mofo-style": "^2.3.0",
-    "ncp": "^2.0.0",
     "node-sass": "^3.4.2",
     "npm-run-all": "^1.5.1",
     "sass-lint": "^1.5.0",
-    "shelljs": "^0.7.0"
+    "shelljs": "^0.7.0",
+    "shx": "^0.2.0"
   }
 }
