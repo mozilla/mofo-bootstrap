@@ -51,6 +51,6 @@ To lint your Sass code, run `npm run test:sass`
 
 ## Deploying
 
-To deploy to `gh-pages` first ensure that you have `mozilla` (mozilla/mofo-bootstrap) set up as a remote.
+Deployment is run automatically after `npm version` is invoked as part of the `postversion` script.
 
-If you have push access, simply run `npm run deploy` to build the latest code on `mozilla/master` and push it to `gh-pages`.
+The `npm run deploy` command will deploy a demo page and compiled CSS for the library to the `gh-pages` branch of the `origin` remote. It will use the latest code on the `master` branch of the `origin` remote. It's not recommended to run it on its own, because doing so can result in the deployed demo and library not matching the latest published package in npm.
