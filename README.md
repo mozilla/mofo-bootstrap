@@ -29,7 +29,7 @@ Run the following commands in your terminal:
 ```
 dest/ <- Contains compiled code. Don't edit anything in this folder!
 src/
-├── index.jade <- Template for demo page (Creates: dest/index.html)
+├── index.pug <- Template for demo page (Creates: dest/index.html)
 └── scss/
     ├── custom/ <- SCSS modules for non-Bootstrap components.
     ├── overrides/ <- SCSS modules that override or extend Bootstrap components.
