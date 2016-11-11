@@ -44,6 +44,7 @@
     "node-sass": "^3.4.2",
     "npm-run-all": "^3.1.1",
     "pug": "^2.0.0-beta6",
+    "pug-cli": "^1.0.0-alpha6",
     "sass-lint": "^1.5.0",
     "shelljs": "^0.7.0",
     "shx": "^0.2.0"
