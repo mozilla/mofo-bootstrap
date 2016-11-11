@@ -17,7 +17,7 @@ html
       h2.display-4 Color
 
       mixin color-block(color, value)
-        div(class='color-block color-block-#{color}')
+        div(class=`color-block color-block-${color}`)
           .swatch.darker 15% darkened
           .swatch.regular 100%
           .swatch.opacity-30 30%
@@ -29,7 +29,7 @@ html
             p.value=value
 
       mixin text-block(weight, value)
-        div(class='text-block text-block-#{weight}')
+        div(class=`text-block text-block-${weight}`)
           h6 Fira Sans #{value}
           h5 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890
 
