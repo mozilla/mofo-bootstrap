@@ -53,4 +53,4 @@ To lint your Sass code, run `npm run test:sass`
 
 Deployment is run automatically after `npm version` is invoked as part of the `postversion` script.
 
-The `npm run deploy` command will deploy a demo page and compiled CSS for the library to the `gh-pages` branch of the `origin` remote. It will use the latest code on the `master` branch of the `origin` remote. It's not recommended to run it on its own, because doing so can result in the deployed demo and library not matching the latest published package in npm.
+The `npm run deploy` command will deploy a demo page and compiled CSS for the library to the `gh-pages` branch of the `origin` remote. It will use the latest code on the `master` branch of the `origin` remote. It's not recommended to run it on its own, because doing so can result in the deployed [demo](https://mozilla.github.io/mofo-bootstrap/demo/) and [library](http://mozilla.github.io/mofo-bootstrap/dest/css/mofo-bootstrap.css) not matching the latest published package in npm.
