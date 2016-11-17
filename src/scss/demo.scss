@@ -136,12 +136,12 @@
     background: $color;
   }
 
-  .opacity-30 {
-    background: transparentize($color, .7);
+  .lighter-15 {
+    background: lighten($color, 15%);
   }
 
-  .opacity-10 {
-    background: transparentize($color, .9);
+  .lighter-40 {
+    background: lighten($color, 40%);
   }
 }
 
