@@ -29,9 +29,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
   }
 
-  .darker {
+  [class *= "darker"], .swatch[class*="gray"] {
     color: $white;
   }
 
@@ -127,70 +128,71 @@
   }
 }
 
-@mixin colorBlockChildren($color) {
-  .darker {
-    background: darken($color, 15%);
+@mixin colorBlockChildren($color, $lighten...) {
+  @each $brightness in $lighten {
+    @if($brightness < 0) {
+      $brightness: $brightness * -1;
+      .darker-#{$brightness} {
+        background: darken($color, $brightness);
+        &:before{
+          content: '#{darken($color, $brightness)}';
+        }
+      }
+    } @else {
+      .lighter-#{$brightness} {
+        background: lighten($color, $brightness);
+        &:before{
+          content: '#{lighten($color, $brightness)}';
+        }
+      }
+    }
   }
-
   .regular {
     background: $color;
-  }
-
-  .lighter-15 {
-    background: lighten($color, 15%);
-  }
-
-  .lighter-40 {
-    background: lighten($color, 40%);
+    &:before {
+      content: '#{$color}';
+    }
   }
 }
 
-.color-block-dino-red {
-  @include colorBlockChildren($dino-red);
+$mofo-colors: (
+  dino-red: $dino-red,
+  firefox-orange: $firefox-orange,
+  market-orange: $market-orange,
+  flame-yellow: $flame-yellow,
+  gecko-green: $gecko-green,
+  summit-teal: $summit-teal,
+  mobile-blue: $mobile-blue,
+  developer-blue: $developer-blue,
+  nightly-blue: $nightly-blue,
+  aurora-purple: $aurora-purple,
+  bikeshed-magenta: $bikeshed-magenta
+  );
+
+$mofo-grays:(
+  gray-darkest: $gray-darkest,
+  gray-darker: $gray-darker,
+  gray-dark: $gray-dark,
+  gray: $gray,
+  gray-light: $gray-light,
+  gray-lighter: $gray-lighter,
+  gray-lightest: $gray-lightest,
+  off-white: $off-white
+);
+
+@each $colorName, $colorVar in $mofo-colors{
+  .color-block-#{$colorName} {
+    @include colorBlockChildren($colorVar, -15, 15, 40);
+  }
 }
 
-.color-block-firefox-orange {
-  @include colorBlockChildren($firefox-orange);
-}
-
-.color-block-market-orange {
-  @include colorBlockChildren($market-orange);
-}
-
-.color-block-flame-yellow {
-  @include colorBlockChildren($flame-yellow);
-}
-
-.color-block-gecko-green {
-  @include colorBlockChildren($gecko-green);
-}
-
-.color-block-summit-teal {
-  @include colorBlockChildren($summit-teal);
-}
-
-.color-block-mobile-blue {
-  @include colorBlockChildren($mobile-blue);
-}
-
-.color-block-developer-blue {
-  @include colorBlockChildren($developer-blue);
-}
-
-.color-block-nightly-blue {
-  @include colorBlockChildren($nightly-blue);
-}
-
-.color-block-aurora-purple {
-  @include colorBlockChildren($aurora-purple);
-}
-
-.color-block-bikeshed-magenta {
-  @include colorBlockChildren($bikeshed-magenta);
-}
-
-.color-block-charcoal {
-  @include colorBlockChildren($charcoal);
+@each $grayName, $grayVar in $mofo-grays{
+  .swatch.#{$grayName} {
+    background: $grayVar;
+    &:before{
+      content: '#{$grayVar}';
+    }
+  }
 }
 
 @mixin textBlock($weight) {
