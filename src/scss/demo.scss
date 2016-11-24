@@ -31,7 +31,7 @@
     justify-content: center;
   }
 
-  .darker {
+  [class *= "darker"] {
     color: $white;
   }
 
@@ -127,67 +127,42 @@
   }
 }
 
-@mixin colorBlockChildren($color) {
-  .darker {
-    background: darken($color, 15%);
+@mixin colorBlockChildren($color, $lighten...) {
+  @each $brightness in $lighten {
+    @if($brightness < 0) {
+      $brightness: $brightness * -1;
+      .darker-#{$brightness} {
+        background: darken($color, $brightness);
+        &:before{
+          content: '#{darken($color, $brightness)}';
+        }
+      }
+    } @else {
+      .lighter-#{$brightness} {
+        background: lighten($color, $brightness);
+        &:before{
+          content: '#{lighten($color, $brightness)}';
+        }
+      }
+    }
   }
-
   .regular {
     background: $color;
-  }
-
-  .lighter-15 {
-    background: lighten($color, 15%);
-  }
-
-  .lighter-40 {
-    background: lighten($color, 40%);
+    &:before {
+      content: '#{$color}';
+    }
   }
 }
 
-.color-block-dino-red {
-  @include colorBlockChildren($dino-red);
+$mofo-colors: 'dino-red','firefox-orange','market-orange','flame-yellow','gecko-green','summit-teal','mobile-blue','developer-blue','nightly-blue','aurora-purple','bikeshed-magenta';
+
+@each $color in $mofo-colors{
+  $colorVal: '$'+$color;
+  .color-block-#{$color} {
+    @include colorBlockChildren($colorVal, -15, 15, 40);
+  }
 }
 
-.color-block-firefox-orange {
-  @include colorBlockChildren($firefox-orange);
-}
-
-.color-block-market-orange {
-  @include colorBlockChildren($market-orange);
-}
-
-.color-block-flame-yellow {
-  @include colorBlockChildren($flame-yellow);
-}
-
-.color-block-gecko-green {
-  @include colorBlockChildren($gecko-green);
-}
-
-.color-block-summit-teal {
-  @include colorBlockChildren($summit-teal);
-}
-
-.color-block-mobile-blue {
-  @include colorBlockChildren($mobile-blue);
-}
-
-.color-block-developer-blue {
-  @include colorBlockChildren($developer-blue);
-}
-
-.color-block-nightly-blue {
-  @include colorBlockChildren($nightly-blue);
-}
-
-.color-block-aurora-purple {
-  @include colorBlockChildren($aurora-purple);
-}
-
-.color-block-bikeshed-magenta {
-  @include colorBlockChildren($bikeshed-magenta);
-}
 
 .color-block-charcoal {
   @include colorBlockChildren($charcoal);
