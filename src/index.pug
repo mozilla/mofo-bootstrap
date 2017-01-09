@@ -18,10 +18,10 @@ html
 
       mixin color-block(color, value)
         div(class=`color-block color-block-${color}`)
-          .swatch.darker 15% darkened
-          .swatch.regular 100%
-          .swatch.opacity-30 30%
-          .swatch.opacity-10 10%
+          .swatch.darker-15
+          .swatch.regular
+          .swatch.lighter-15
+          .swatch.lighter-40
 
           .meta
             p.name
@@ -36,6 +36,11 @@ html
       p.lead Primary Palette
 
       .color-blocks
+        .color-block
+          .swatch 15% darker
+          .swatch.regular(style=`color:#4d4f53`) Base color
+          .swatch 15% lighter
+          .swatch 40% lighter
         +color-block('dino-red', '#d24735')
         +color-block('firefox-orange', '#f26c23')
         +color-block('market-orange', '#f89c24')
@@ -44,12 +49,28 @@ html
         +color-block('summit-teal', '#3bba99')
 
       .color-blocks
+        .color-block
+          .swatch 15% darker
+          .swatch.regular(style=`color:#4d4f53`) Base color
+          .swatch 15% lighter
+          .swatch 40% lighter
         +color-block('mobile-blue', '#16afe5')
         +color-block('developer-blue', '#4383bf')
         +color-block('nightly-blue', '#5a6ba4')
         +color-block('aurora-purple', '#ab5da4')
         +color-block('bikeshed-magenta', '#e14164')
-        +color-block('charcoal', '#4d4f53')
+
+      .color-blocks
+        .color-block
+          .swatch.gray-darkest gray-darkest
+          .swatch.gray-darker gray-darker
+          .swatch.gray-dark gray-dark
+          .swatch.gray gray
+        .color-block
+          .swatch.gray-light gray-light
+          .swatch.gray-lighter gray-lighter
+          .swatch.gray-lightest gray-lightest
+          .swatch.off-white off-white
 
       hr
       h2.display-4 Buttons
