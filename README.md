@@ -31,7 +31,8 @@ dest/ <- Contains compiled code. Don't edit anything in this folder!
 src/
 ├── index.pug <- Template for demo page (Creates: dest/index.html)
 └── scss/
-    ├── custom/ <- SCSS modules for non-Bootstrap components.
+    ├── custom/ <- SCSS for non-Bootstrap modules.
+    |     └── components/ <- SCSS for custom components.
     ├── overrides/ <- SCSS modules that override or extend Bootstrap components.
     ├── demo.scss <- SCSS specific to the demo page.
     └── mofo-bootstrap.scss <- Primary entry point that defines all imports.
