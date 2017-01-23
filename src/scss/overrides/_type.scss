@@ -1,3 +1,6 @@
+// sass-lint:disable single-line-per-selector
+// Because that rule just doesn't make sense for this file
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   @include media-breakpoint-up(sm) {
