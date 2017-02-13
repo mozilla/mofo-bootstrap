@@ -1,0 +1,8 @@
+//This undoes setting of these elements' font to sans-serif by normalize
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+}

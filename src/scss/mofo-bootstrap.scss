@@ -16,6 +16,7 @@
 
 // Reset and dependencies
 @import '../../node_modules/bootstrap/scss/normalize';
+@import './overrides/normalize';
 @import '../../node_modules/bootstrap/scss/print';
 
 // Core CSS
