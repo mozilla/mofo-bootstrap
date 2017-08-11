@@ -1,8 +1,13 @@
 //This undoes setting of these elements' font to sans-serif by normalize
-button,
 input,
 optgroup,
 select,
 textarea {
   font-family: inherit;
 }
+
+// Mozilla's brand guide says UI controls should use Open Sans instead of Zilla
+button {
+  font-family: "Open Sans", X-LocaleSpecific, sans-serif;
+}
+
