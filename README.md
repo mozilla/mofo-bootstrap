@@ -21,7 +21,7 @@ Table of Contents (ToC)
 
 * [Setup for Development](#setup-for-development)
 * [File Structure](#file-structure)
-* [File Naming Conventions](#file-naming conventions)
+* [File Naming Conventions](#file-naming-conventions)
 * [Linting](#linting)
 * [Deploying](#deploying)
 
@@ -74,3 +74,7 @@ To lint your Sass code, run `npm run test:sass`
 Deployment is run automatically after `npm version` is invoked as part of the `postversion` script.
 
 The `npm run deploy` command will deploy a demo page and compiled CSS for the library to the `gh-pages` branch of the `origin` remote. It will use the latest code on the `master` branch of the `origin` remote. It's not recommended to run it on its own, because doing so can result in the deployed [demo](https://mozilla.github.io/mofo-bootstrap/demo/) and [library](https://mozilla.github.io/mofo-bootstrap/dest/css/mofo-bootstrap.css) not matching the latest published package in npm.
+
+---
+
+<img src="https://avatars2.githubusercontent.com/u/131524?s=200&v=4" width="50"></img> <img src="http://cdn.ttgtmedia.com/ITKE/cwblogs/open-source-insider/Mozilla%20PL.png" width="150"></img>
