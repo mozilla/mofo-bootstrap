@@ -16,6 +16,17 @@ For the moment it's recommended that you use one of two methods to include the c
 
 It's not currently advisable that you extend and compile the mofo-bootstrap SCSS in your project. SCSS doesn't ([currently](https://github.com/sass/sass/issues/739)) allow for dynamic import paths, which complicates things when mofo-bootstrap becomes a module. We're working on a reasonable approach for allowing this...
 
+Table of Contents (ToC)
+=======================
+
+* [Setup for Development](#setup-for-development)
+* [File Structure](#file-structure)
+* [File Naming Conventions](#file-naming-conventions)
+* [Linting](#linting)
+* [Deploying](#deploying)
+
+---
+
 ## Setup for Development
 
 Run the following commands in your terminal:
@@ -23,6 +34,8 @@ Run the following commands in your terminal:
 1. `git clone https://github.com/mozilla/mofo-bootstrap.git && cd mofo-bootstrap`
 2. `npm i`
 3. `npm start`
+
+---
 
 ## File Structure
 
@@ -38,11 +51,15 @@ src/
     └── mofo-bootstrap.scss <- Primary entry point that defines all imports.
 ```
 
+---
+
 ## File Naming Conventions
 
 - All files should be named in `hyphenated-lowercase`
 - SCSS modules/partials should be prefixed with an underscore (`_`)
 - Bootstrap overrides should be named after their sibling. (For example: `/src/scss/overrides/_type.scss` and `bootstrap/scss/_type.scss`)
+
+---
 
 ## Linting
 
@@ -50,8 +67,14 @@ To lint your Sass code, run `npm run test:sass`
 
 [Travis](https://travis-ci.org/mozilla/mofo-bootstrap) is connected to this task and your pull requests will fail if this test doesn't pass locally.
 
+---
+
 ## Deploying
 
 Deployment is run automatically after `npm version` is invoked as part of the `postversion` script.
 
 The `npm run deploy` command will deploy a demo page and compiled CSS for the library to the `gh-pages` branch of the `origin` remote. It will use the latest code on the `master` branch of the `origin` remote. It's not recommended to run it on its own, because doing so can result in the deployed [demo](https://mozilla.github.io/mofo-bootstrap/demo/) and [library](https://mozilla.github.io/mofo-bootstrap/dest/css/mofo-bootstrap.css) not matching the latest published package in npm.
+
+---
+
+<img src="https://avatars2.githubusercontent.com/u/131524?s=200&v=4" width="50"></img> <img src="http://cdn.ttgtmedia.com/ITKE/cwblogs/open-source-insider/Mozilla%20PL.png" width="100"></img>
