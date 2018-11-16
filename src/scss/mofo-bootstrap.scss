@@ -14,13 +14,12 @@
 @import '../../node_modules/bootstrap/scss/variables';
 @import './overrides/variables';
 @import '../../node_modules/bootstrap/scss/mixins';
-
-// Reset and dependencies
+@import './overrides/mixins';
 @import '../../node_modules/bootstrap/scss/root';
-@import '../../node_modules/bootstrap/scss/reboot';
-@import './overrides/normalize';
 
 // Core CSS
+@import '../../node_modules/bootstrap/scss/reboot';
+@import './overrides/normalize';
 @import '../../node_modules/bootstrap/scss/type';
 @import './overrides/type';
 @import '../../node_modules/bootstrap/scss/images';
@@ -59,7 +58,7 @@
 // Utility classes
 @import '../../node_modules/bootstrap/scss/utilities';
 
-// Print styles
+// Reset print styles
 @import '../../node_modules/bootstrap/scss/print';
 
  // Additional non-Bootstrap components
