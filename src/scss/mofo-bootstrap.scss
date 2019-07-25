@@ -1,6 +1,7 @@
 /*!
- * Bootstrap v4.0.0-alpha.6 (http://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
+ * Bootstrap v4.1.3 (https://getbootstrap.com/)
+ * Copyright 2011-2018 The Bootstrap Authors
+ * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
@@ -9,18 +10,16 @@
 @import 'custom/colors';
 
 // Core variables and mixins
+@import '../../node_modules/bootstrap/scss/functions';
 @import '../../node_modules/bootstrap/scss/variables';
 @import './overrides/variables';
 @import '../../node_modules/bootstrap/scss/mixins';
 @import './overrides/mixins';
-
-// Reset and dependencies
-@import '../../node_modules/bootstrap/scss/normalize';
-@import './overrides/normalize';
-@import '../../node_modules/bootstrap/scss/print';
+@import '../../node_modules/bootstrap/scss/root';
 
 // Core CSS
 @import '../../node_modules/bootstrap/scss/reboot';
+@import './overrides/normalize';
 @import '../../node_modules/bootstrap/scss/type';
 @import './overrides/type';
 @import '../../node_modules/bootstrap/scss/images';
@@ -48,7 +47,6 @@
 @import '../../node_modules/bootstrap/scss/media';
 @import '../../node_modules/bootstrap/scss/list-group';
 @import './overrides/list-group';
-@import '../../node_modules/bootstrap/scss/responsive-embed';
 @import '../../node_modules/bootstrap/scss/close';
 
 // Components w/ JavaScript
@@ -60,5 +58,8 @@
 // Utility classes
 @import '../../node_modules/bootstrap/scss/utilities';
 
-// Additional non-Bootstrap components
-@import 'custom/components/footer';
+// Reset print styles
+@import '../../node_modules/bootstrap/scss/print';
+
+ // Additional non-Bootstrap components
+ @import 'custom/components/footer';
